@@ -1,9 +1,8 @@
----
-File: BF_00_System_Operations.md
-Versione: 1.3
-Ultimo aggiornamento: 2026-04-29
-Modifiche: v1.3 — Integrazione BF_12_Advanced_Craft.md per tecniche avanzate di scrittura creativa
----
+# MACRO_01_SYSTEM_OPERATIONS
+
+
+
+<!-- --- INIZIO CONTENUTO DA MACRO_01_SYSTEM_OPERATIONS --- -->
 
 # SYSTEM OPERATIONS — Flusso operativo completo di BookForge KDP
 
@@ -89,7 +88,7 @@ Conferma la classificazione con l'utente.
 Chiedi: target, tono desiderato, genere, promessa editoriale, vincoli.
 
 ### Step 4: Scelta livello revisione → Esecuzione → Iterazione
-Vedi BF_05_Revision_Checklist.md per i 3 livelli.
+Vedi MACRO_02_CRAFT_AND_STYLE per i 3 livelli.
 
 ### Step 5: (Opzionale) Pacchetto KDP → Fase 6
 
@@ -356,7 +355,7 @@ Fase 1 standard (vedi sopra) + domande aggiuntive per la serie:
 4. I personaggi saranno fissi, rotanti o misti?
 5. L'ambientazione sarà fissa o in evoluzione?
 6. Qual è il modello di serializzazione? (episodico / seriale / ibrido / antologico)
-   — Vedi BF_07 per i dettagli di ogni modello
+   — Vedi MACRO_03_GENRES_AND_STRUCTURES per i dettagli di ogni modello
 ```
 
 #### Step D-a.2: Scheda Strategica della Serie
@@ -401,7 +400,7 @@ Come la Fase 2 standard, ma con focus aggiuntivo su:
 
 #### Step D-a.4: Indice del Volume 1 + Compilazione Bibbia di Continuità
 1. Creare l'indice del Volume 1 → Fase 3 standard
-2. **Compilare la Bibbia di Continuità** (vedi BF_11) con la struttura iniziale:
+2. **Compilare la Bibbia di Continuità** (vedi MACRO_01_SYSTEM_OPERATIONS) con la struttura iniziale:
    - Schema Logico: timeline, regole del mondo, fatti del Volume 1
    - Schema Relazionale: relazioni tra personaggi
    - Character Bible: scheda per ogni personaggio
@@ -415,7 +414,7 @@ Procedere con la Fase 4 standard + regole aggiuntive:
 3. Mantenere coerenza con la Scheda Strategica della Serie
 
 #### Step D-a.6: Snapshot di Fine Volume
-Alla fine della scrittura, produrre lo **Snapshot di Fine Volume** (vedi template in BF_11).
+Alla fine della scrittura, produrre lo **Snapshot di Fine Volume** (vedi template in MACRO_01_SYSTEM_OPERATIONS).
 
 ⏸️ Presentare lo Snapshot e chiedere conferma.
 
@@ -495,7 +494,7 @@ Proporre l'indice del sequel:
 - Deve collegarsi al Volume 1 tramite la Bibbia
 - Deve avere un proprio arco narrativo
 - Deve gestire le trame irrisolte e il foreshadowing
-- Per fiction: consultare BF_07 (sezione Serie e Sequel) per la struttura del primo capitolo
+- Per fiction: consultare MACRO_03_GENRES_AND_STRUCTURES (sezione Serie e Sequel) per la struttura del primo capitolo
 
 ⏸️ Chiedere conferma.
 
@@ -504,11 +503,11 @@ Come la Fase 4, ma con regole aggiuntive:
 1. **Regole di continuità** del Percorso C (stile identico, voce coerente, NO miglioramenti non richiesti)
 2. **Consultazione della Bibbia** prima di ogni capitolo
 3. **Aggiornamento della Bibbia** dopo ogni capitolo
-4. **Primo capitolo**: seguire la struttura consigliata per sequel (vedi BF_07)
+4. **Primo capitolo**: seguire la struttura consigliata per sequel (vedi MACRO_03_GENRES_AND_STRUCTURES)
 
 #### Step D-b.8: Snapshot di Fine Volume + Revisione inter-volume
 1. Produrre lo Snapshot di Fine Volume 2
-2. Eseguire la **Revisione di Continuità Inter-Volume** (vedi BF_11)
+2. Eseguire la **Revisione di Continuità Inter-Volume** (vedi MACRO_01_SYSTEM_OPERATIONS)
 
 #### Step D-b.9: Revisione → Fase 5 + Pacchetto KDP → Fase 6
 
@@ -570,7 +569,7 @@ La Bibbia di Continuità può essere usata anche nei Percorsi A e C **su richies
 - **Percorso A**: alla fine della Fase 3, l'utente può chiedere di compilare la Bibbia per il suo libro singolo (utile per fiction complesse con molti personaggi)
 - **Percorso C**: dopo l'analisi stilistica, l'utente può chiedere di compilare la Bibbia dal materiale esistente
 
-In questi casi, il GPT segue il protocollo di BF_11 ma senza gli elementi specifici della serializzazione (Snapshot, arco di serie, ecc.).
+In questi casi, il GPT segue il protocollo di MACRO_01_SYSTEM_OPERATIONS ma senza gli elementi specifici della serializzazione (Snapshot, arco di serie, ecc.).
 
 ---
 
@@ -638,7 +637,7 @@ Punti di forza iniziali: [...]
 
 ## FASE 2 — RICERCA DI MERCATO WEB
 
-Segui il protocollo dettagliato in **BF_03_Market_Research_Protocol.md**.
+Segui il protocollo dettagliato in **MACRO_04_KDP_MARKETING_SEO**.
 
 ### Flusso sintetico
 1. Ricerca competitor Amazon (top 10-20)
@@ -650,7 +649,7 @@ Segui il protocollo dettagliato in **BF_03_Market_Research_Protocol.md**.
 7. Sintesi strategica
 
 ### Output → REPORT DI RICERCA DI MERCATO KDP
-Il report deve contenere tutti i 22 punti definiti in BF_03.
+Il report deve contenere tutti i 22 punti definiti in MACRO_04_KDP_MARKETING_SEO.
 
 ### Etichettatura dati obbligatoria
 - ✅ Verificato — dato trovato e confermato
@@ -672,9 +671,9 @@ Il report deve contenere tutti i 22 punti definiti in BF_03.
 ## FASE 3 — CREAZIONE INDICE
 
 ### Fonti da consultare
-- **BF_07_Fiction_Structures.md** per fiction
-- **BF_08_Nonfiction_Frameworks.md** per non-fiction
-- **BF_02_Genre_Templates.md** per specifiche del genere
+- **MACRO_03_GENRES_AND_STRUCTURES** per fiction
+- **MACRO_03_GENRES_AND_STRUCTURES** per non-fiction
+- **MACRO_03_GENRES_AND_STRUCTURES** per specifiche del genere
 
 ### Cosa includere nell'indice
 - Titolo e sottotitolo
@@ -753,19 +752,19 @@ d) Tornare all'indice
 ```
 
 ### Regole di scrittura
-- Consulta **BF_04_Writing_Style_Rules.md** per le regole della lingua scelta
-- Consulta **BF_12_Advanced_Craft.md** per le tecniche avanzate di scrittura creativa (figure retoriche, pacing, sottotesto, dialogo, descrizione sensoriale, voce autoriale)
-- Consulta **BF_02_Genre_Templates.md** per le convenzioni del genere
+- Consulta **MACRO_02_CRAFT_AND_STYLE** per le regole della lingua scelta
+- Consulta **MACRO_02_CRAFT_AND_STYLE** per le tecniche avanzate di scrittura creativa (figure retoriche, pacing, sottotesto, dialogo, descrizione sensoriale, voce autoriale)
+- Consulta **MACRO_03_GENRES_AND_STRUCTURES** per le convenzioni del genere
 - NON generare tutto il libro in una risposta (salvo richiesta esplicita)
 - Mantenere coerenza con la Scheda Strategica (Fase 1)
 - Usare il canvas per testi lunghi
-- Applicare il **test anti-AI rafforzato** (BF_12, Parte VII) a ogni capitolo
+- Applicare il **test anti-AI rafforzato** (MACRO_02_CRAFT_AND_STYLE, Parte VII) a ogni capitolo
 
 ---
 
 ## FASE 5 — REVISIONE
 
-Segui le checklist dettagliate in **BF_05_Revision_Checklist.md**.
+Segui le checklist dettagliate in **MACRO_02_CRAFT_AND_STYLE**.
 
 ### Tre livelli
 | Livello | Cosa fa |
@@ -798,9 +797,9 @@ Chiedi sempre o deduci quale livello usare.
 
 ## FASE 6 — PACCHETTO FINALE KDP
 
-Segui il template completo in **BF_06_KDP_Package_Template.md**.
-Consulta **BF_09_Amazon_SEO.md** per ottimizzazione listing.
-Consulta **BF_01_KDP_Guidelines.md** per specifiche tecniche.
+Segui il template completo in **MACRO_04_KDP_MARKETING_SEO**.
+Consulta **MACRO_04_KDP_MARKETING_SEO** per ottimizzazione listing.
+Consulta **MACRO_04_KDP_MARKETING_SEO** per specifiche tecniche.
 
 ### Elementi del pacchetto
 1. Dati identificativi (titolo, sottotitolo, autore, lingua, genere)
@@ -829,23 +828,23 @@ Consulta **BF_01_KDP_Guidelines.md** per specifiche tecniche.
 
 | Fase | File da consultare |
 |------|--------------------|
-| Ogni inizio progetto | BF_00 (questo file) + BF_01 |
-| Fase 1 — Questionario | BF_00 + BF_02 |
-| Fase 2 — Mercato | BF_03 |
-| Fase 3 — Indice | BF_02 + BF_07 (fiction) + BF_08 (non-fiction) |
-| Fase 4 — Scrittura | BF_04 + **BF_12** + BF_02 |
-| Fase 5 — Revisione | BF_05 + BF_04 + **BF_12** |
-| Fase 6 — Pacchetto KDP | BF_06 + BF_09 + BF_01 |
-| Percorso C — Continuare libro | BF_00 + BF_04 + **BF_12** + BF_05 + BF_02 + BF_07/BF_08 |
-| Percorso D — Collana/Sequel | BF_00 + BF_11 + BF_04 + **BF_12** + BF_05 + BF_07/BF_08 |
-| Libri per bambini | BF_10 (in aggiunta agli altri) |
+| Ogni inizio progetto | MACRO_01_SYSTEM_OPERATIONS (questo file) + MACRO_04_KDP_MARKETING_SEO |
+| Fase 1 — Questionario | MACRO_01_SYSTEM_OPERATIONS + MACRO_03_GENRES_AND_STRUCTURES |
+| Fase 2 — Mercato | MACRO_04_KDP_MARKETING_SEO |
+| Fase 3 — Indice | MACRO_03_GENRES_AND_STRUCTURES + MACRO_03_GENRES_AND_STRUCTURES (fiction) + MACRO_03_GENRES_AND_STRUCTURES (non-fiction) |
+| Fase 4 — Scrittura | MACRO_02_CRAFT_AND_STYLE + **MACRO_02_CRAFT_AND_STYLE** + MACRO_03_GENRES_AND_STRUCTURES |
+| Fase 5 — Revisione | MACRO_02_CRAFT_AND_STYLE + MACRO_02_CRAFT_AND_STYLE + **MACRO_02_CRAFT_AND_STYLE** |
+| Fase 6 — Pacchetto KDP | MACRO_04_KDP_MARKETING_SEO + MACRO_04_KDP_MARKETING_SEO + MACRO_04_KDP_MARKETING_SEO |
+| Percorso C — Continuare libro | MACRO_01_SYSTEM_OPERATIONS + MACRO_02_CRAFT_AND_STYLE + **MACRO_02_CRAFT_AND_STYLE** + MACRO_02_CRAFT_AND_STYLE + MACRO_03_GENRES_AND_STRUCTURES + MACRO_03_GENRES_AND_STRUCTURES/MACRO_03_GENRES_AND_STRUCTURES |
+| Percorso D — Collana/Sequel | MACRO_01_SYSTEM_OPERATIONS + MACRO_01_SYSTEM_OPERATIONS + MACRO_02_CRAFT_AND_STYLE + **MACRO_02_CRAFT_AND_STYLE** + MACRO_02_CRAFT_AND_STYLE + MACRO_03_GENRES_AND_STRUCTURES/MACRO_03_GENRES_AND_STRUCTURES |
+| Libri per bambini | MACRO_03_GENRES_AND_STRUCTURES (in aggiunta agli altri) |
 
 ---
 
 ## REGOLE LINGUA E STILE (sintesi)
 
-Regole di base in **BF_04_Writing_Style_Rules.md**.
-Tecniche avanzate in **BF_12_Advanced_Craft.md**.
+Regole di base in **MACRO_02_CRAFT_AND_STYLE**.
+Tecniche avanzate in **MACRO_02_CRAFT_AND_STYLE**.
 
 Principi chiave:
 1. Il testo deve sembrare SCRITTO NATIVAMENTE, non tradotto
@@ -853,11 +852,11 @@ Principi chiave:
 3. Per l'italiano: costruzioni naturali, evitare calchi dall'inglese
 4. Per l'inglese: frasi dirette, active voice, ritmo anglosassone
 5. Per altre lingue: adattarsi completamente
-6. MAI tono da AI (vedi anti-pattern in BF_04 e test anti-AI rafforzato in BF_12)
+6. MAI tono da AI (vedi anti-pattern in MACRO_02_CRAFT_AND_STYLE e test anti-AI rafforzato in MACRO_02_CRAFT_AND_STYLE)
 7. Il tono della Scheda Strategica va mantenuto ovunque
 8. Usare figure retoriche come strumenti di precisione, non come decorazione
 9. Gestire consapevolmente la distanza narrativa, il sottotesto e il pacing
-10. Ogni capitolo deve superare il test di voce autoriale (BF_12, Parte VII)
+10. Ogni capitolo deve superare il test di voce autoriale (MACRO_02_CRAFT_AND_STYLE, Parte VII)
 
 ---
 
@@ -900,3 +899,416 @@ Se qualcosa devia, segnalarlo all'utente.
 - Offrire sempre la possibilità di tornare indietro
 - Numerare gli output
 - Riepilogare periodicamente lo stato del progetto nelle conversazioni lunghe
+
+<!-- --- FINE CONTENUTO DA MACRO_01_SYSTEM_OPERATIONS --- -->
+
+
+
+<!-- --- INIZIO CONTENUTO DA MACRO_01_SYSTEM_OPERATIONS --- -->
+
+# SERIES CONTINUITY BIBLE — Bibbia di Continuità per Collane e Sequel
+
+Questo file definisce il sistema di **Bibbia di Continuità**: un documento strutturato che il GPT compila e mantiene aggiornato per garantire coerenza assoluta tra capitoli, volumi e sequel.
+
+---
+
+## COS'È LA BIBBIA DI CONTINUITÀ
+
+La Bibbia di Continuità è la **fonte di verità unica** per tutto l'universo narrativo (fiction) o per l'intero ecosistema di contenuti (non-fiction) di una serie/collana.
+
+### Scopo
+- Evitare contraddizioni nei fatti, nella timeline, nei personaggi
+- Mantenere coerenza tra volumi diversi scritti in sessioni separate
+- Fornire al GPT un riferimento strutturato da consultare **prima di ogni capitolo**
+- Tracciare l'evoluzione di personaggi, relazioni, trame e concetti volume per volume
+
+### Quando compilarla
+| Situazione | Quando |
+|------------|--------|
+| Percorso D — Nuova collana da zero | Alla fine della Fase 3 (indice), prima di scrivere |
+| Percorso D — Sequel da libro esistente | Dopo l'analisi del libro precedente (compilazione automatica) |
+| Percorso D — Nuovo volume di collana in corso | L'utente la fornisce o il GPT la ricostruisce |
+| Percorso A — Libro singolo (opzionale) | Su richiesta dell'utente, alla fine della Fase 3 |
+| Percorso C — Continuare libro (opzionale) | Su richiesta, dopo l'analisi stilistica |
+
+### Chi la compila
+**Il GPT la compila automaticamente.** L'utente conferma, corregge e integra.
+
+---
+
+## TEMPLATE — SCHEMA LOGICO (LOGIC_MAP)
+
+Lo Schema Logico documenta **i fatti, le regole e la sequenza degli eventi** dell'universo narrativo.
+
+```
+📐 SCHEMA LOGICO — [Titolo della serie]
+
+═══ TIMELINE ═══
+
+Volume [N]:
+├── [Data/Momento] — [Evento]
+├── [Data/Momento] — [Evento]
+└── ...
+
+Note sulla cronologia: [tempo lineare / flashback / parallelo / salti temporali]
+Durata complessiva della storia: [...]
+
+═══ FATTI STABILITI ═══
+(Verità del mondo narrativo che NON possono essere contraddette)
+
+1. [Fatto] — Stabilito in: Vol. [N], Cap. [N]
+2. [Fatto] — Stabilito in: Vol. [N], Cap. [N]
+
+═══ REGOLE DEL MONDO ═══
+
+Sistema magico / tecnologico:
+├── Regola 1: [...]
+├── Limitazioni: [...]
+└── Costi / conseguenze: [...]
+
+Leggi / costumi / struttura sociale: [...]
+Geografia / ambientazione: [...]
+
+═══ CATENE CAUSA-EFFETTO ═══
+
+1. [Evento A] → [Conseguenza B] → [Situazione C]
+
+═══ MISTERI E RIVELAZIONI ═══
+
+| Mistero | Stato | Noto a chi | Rivelato in | Note |
+|---------|-------|------------|-------------|------|
+| [...] | 🔒 Nascosto / 🔓 Rivelato | [...] | Vol.X Cap.Y | [...] |
+
+═══ PROMESSE NARRATIVE APERTE ═══
+
+1. [Promessa] — Creata in: Vol. [N], Cap. [N] — Stato: ⏳ Aperta / ✅ Risolta
+
+═══ STATO ATTUALE DEL MONDO ═══
+
+[Descrizione sintetica della situazione corrente]
+```
+
+---
+
+## TEMPLATE — SCHEMA RELAZIONALE (RELATION_MAP)
+
+Lo Schema Relazionale documenta **le connessioni tra personaggi, luoghi, oggetti e fazioni**.
+
+```
+🔗 SCHEMA RELAZIONALE — [Titolo della serie]
+
+═══ RELAZIONI TRA PERSONAGGI ═══
+
+[Personaggio A] ←→ [Personaggio B]
+├── Tipo: [parentela / amicizia / amore / rivalità / alleanza / conflitto / mentore-allievo]
+├── Stato attuale: [attiva / spezzata / segreta / in evoluzione]
+├── Evoluzione:
+│   ├── Vol. 1: [stato]
+│   └── Vol. N: [stato attuale]
+└── Note: [...]
+
+═══ MAPPA DELLE FAZIONI / GRUPPI ═══
+
+Fazione 1: [Nome]
+├── Membri: [elenco]
+├── Obiettivo: [...]
+├── Alleata con: [...] / In conflitto con: [...]
+└── Stato: [attiva / sciolta / in crisi]
+
+═══ RELAZIONI PERSONAGGIO-LUOGO ═══
+
+| Personaggio | Luogo | Tipo di legame | Volume |
+|-------------|-------|----------------|--------|
+| [...] | [...] | Residenza / Origine / Esilio | Vol. N |
+
+═══ RELAZIONI PERSONAGGIO-OGGETTO ═══
+
+| Personaggio | Oggetto | Tipo di legame | Volume |
+|-------------|---------|----------------|--------|
+| [...] | [...] | Possesso / Ricerca / Perdita | Vol. N |
+
+═══ MAPPA VISIVA (consultazione rapida) ═══
+
+[Protagonista] ——amore——→ [Personaggio B]
+       |                         |
+    mentore                   sorella
+       ↓                         ↓
+[Mentore]               [Personaggio C] ——rivale——→ [Antagonista]
+```
+
+---
+
+## TEMPLATE — SCHEDA PERSONAGGI (CHARACTER_BIBLE)
+
+### Personaggio principale — Template completo
+
+```
+👤 SCHEDA PERSONAGGIO — [Nome]
+
+═══ IDENTITÀ ═══
+Nome completo: [...]
+Soprannomi / Alias: [...]
+Età: [...] (inizio) → [...] (attuale)
+
+═══ ASPETTO FISICO ═══
+Altezza / Corporatura: [...]
+Capelli / Occhi: [...]
+Segni particolari: [...]
+Impressione che fa: [...]
+
+═══ PERSONALITÀ ═══
+Tratti dominanti: [3-5 tratti]
+Difetto fatale (flaw): [...]
+Forza principale: [...]
+Paure: [...]
+Desideri profondi: [...]
+Tic / Abitudini: [...]
+Sotto pressione: [come reagisce]
+
+═══ BACKGROUND ═══
+Famiglia: [...]
+Traumi significativi: [...]
+Segreti: [cosa nasconde e a chi]
+
+═══ MOTIVAZIONE ═══
+Obiettivo dichiarato: [...] / Obiettivo reale: [...]
+Ostacolo interno: [...] / Ostacolo esterno: [...]
+Posta in gioco: [...]
+
+═══ ARCO EVOLUTIVO ═══
+Chi è all'inizio: [...] → Chi diventa alla fine: [...]
+Evoluzione per volume:
+├── Vol. 1: [stato, trasformazione]
+└── Vol. N: [stato attuale]
+
+═══ VOCE ═══
+Come parla: [registro, ritmo]
+Intercalari: [...]
+Differenze con altri personaggi: [...]
+
+═══ CONOSCENZE ═══
+
+| Informazione | La sa? | Da quando | Volume/Capitolo |
+|-------------|--------|-----------|----------------|
+| [...] | ✅ Sì / ❌ No / 🔶 Sospetta | [...] | Vol.X Cap.Y |
+
+═══ STATO PER VOLUME ═══
+
+| Volume | Stato | Posizione | Situazione |
+|--------|-------|-----------|------------|
+| Vol. 1 | Vivo | [dove] | [situazione] |
+```
+
+### Personaggio secondario — Template sintetico
+
+```
+👤 [Nome] — Personaggio secondario
+Ruolo: [mentore / alleato / antagonista / ...]
+Tratti chiave: [2-3 tratti]
+Funzione narrativa: [perché esiste]
+Relazione con il protagonista: [...]
+Voce: [come parla]
+Arco: [statico / evolve / muore / ...]
+Presente in: Vol. [elenco]
+Stato attuale: [...]
+```
+
+---
+
+## ADATTAMENTO PER NON-FICTION (COLLANE DIDATTICHE)
+
+```
+📚 BIBBIA DI CONTINUITÀ — Collana Non-Fiction: [Titolo]
+
+═══ MAPPA CONCETTUALE ═══
+
+Volume 1: [Titolo]
+├── Concetti introdotti: [elenco]
+├── Terminologia definita: [elenco]
+├── Livello: [base / intermedio / avanzato]
+└── Prerequisiti: [nessuno]
+
+Volume 2: [Titolo]
+├── Concetti introdotti: [elenco]
+├── Concetti ripresi dal Vol. 1: [elenco]
+└── Prerequisiti: [Vol. 1]
+
+═══ GLOSSARIO UNIFICATO ═══
+
+| Termine | Definizione | Introdotto in | Usato in |
+|---------|-------------|--------------|----------|
+| [...] | [...] | Vol. 1, Cap. 3 | Vol. 1, 2, 3 |
+
+═══ PROGRESSIONE DIDATTICA ═══
+Vol. 1: [Cosa impara il lettore]
+Vol. 2: [Cosa impara — costruisce su Vol. 1]
+
+═══ RIFERIMENTI INCROCIATI ═══
+
+| Da Volume | Riferisce a | Contesto |
+|-----------|-------------|----------|
+| Vol. 2, Cap. 4 | Vol. 1, Cap. 2 | Riprende il concetto di [...] |
+
+═══ PROMESSA DELLA COLLANA ═══
+Complessiva: [cosa ottiene completando tutta la collana]
+Per volume: [cosa ottiene da ogni volume]
+
+═══ COERENZA STILISTICA ═══
+Tono: [uniforme tra volumi]
+Formato capitoli: [struttura ricorrente]
+Elementi ricorrenti: [box, checklist, esercizi]
+```
+
+---
+
+## PROTOCOLLO DI AGGIORNAMENTO DELLA BIBBIA
+
+### Regole operative
+
+1. **PRIMA di ogni capitolo**: consultare la Bibbia per verificare coerenza
+2. **DOPO ogni capitolo**: aggiornare la Bibbia con nuovi elementi introdotti
+3. **ALLA FINE di ogni volume**: produrre lo Snapshot di Fine Volume
+4. **ALL'INIZIO di ogni nuovo volume**: rileggere l'intera Bibbia e lo Snapshot precedente
+5. **MAI cancellare**: le informazioni superate vanno storicizzate, non cancellate
+
+### Checklist post-capitolo
+
+```
+☐ Nuovi personaggi introdotti? → Aggiungere alla Character Bible
+☐ Nuove relazioni create o cambiate? → Aggiornare Relation Map
+☐ Nuovi fatti stabiliti? → Aggiungere ai Fatti Stabiliti
+☐ Timeline aggiornata? → Aggiungere eventi
+☐ Misteri rivelati o nuovi misteri? → Aggiornare Misteri e Rivelazioni
+☐ Conoscenze dei personaggi cambiate? → Aggiornare tabella Conoscenze
+☐ Promesse narrative create? → Aggiungere alle Promesse Aperte
+```
+
+### Checklist pre-capitolo
+
+```
+☐ Tratti, voce e stato dei personaggi coerenti con la Bibbia?
+☐ Timeline coerente con gli eventi già stabiliti?
+☐ Fatti menzionati non contraddicono i Fatti Stabiliti?
+☐ Relazioni riflettono lo stato attuale nella Relation Map?
+☐ Conoscenze dei personaggi rispettate (nessuno sa cose che non dovrebbe)?
+☐ Regole del mondo rispettate?
+```
+
+---
+
+## TEMPLATE — SNAPSHOT DI FINE VOLUME
+
+```
+📸 SNAPSHOT DI FINE VOLUME — [Titolo] — Volume [N]
+
+═══ STATO DEI PERSONAGGI ═══
+
+| Personaggio | Stato | Posizione | Situazione emotiva |
+|-------------|-------|-----------|--------------------|
+| [Protagonista] | Vivo | [dove] | [come sta] |
+| [Personaggio B] | Morto | — | Morto in Cap. [N] |
+
+═══ TRAME RISOLTE ═══
+✅ [Trama 1] — Risolta in Cap. [N]: [come]
+
+═══ TRAME IRRISOLTE ═══
+⏳ [Trama 1] — Stato: [dove si è fermata]
+
+═══ GANCI PER IL VOLUME SUCCESSIVO ═══
+🪝 [Hook 1]: [descrizione]
+
+═══ FORESHADOWING ATTIVO ═══
+🌱 [Elemento 1] — Seminato in Cap. [N]
+
+═══ PROMESSE AL LETTORE NON ANCORA MANTENUTE ═══
+📌 [Promessa 1] — Fatta in Vol. [N], Cap. [N]
+
+═══ EVOLUZIONE DEL TEMA ═══
+Tema principale: [...] — Dove si è sviluppato: [...] — Dove potrebbe andare: [...]
+
+═══ NOTE PER IL PROSSIMO VOLUME ═══
+- [Nota 1]
+- [Nota 2]
+```
+
+---
+
+## REVISIONE DI CONTINUITÀ INTER-VOLUME
+
+```
+📝 REVISIONE DI CONTINUITÀ INTER-VOLUME — Volume [N]
+
+═══ COERENZA CON I VOLUMI PRECEDENTI ═══
+☐ Nessuna contraddizione con i Fatti Stabiliti
+☐ Timeline coerente con gli eventi dei volumi precedenti
+☐ Regole del mondo rispettate
+☐ Aspetto fisico e tratti dei personaggi coerenti
+☐ Relazioni coerenti con lo stato documentato
+☐ Conoscenze dei personaggi rispettate
+☐ Tono e stile coerenti con i volumi precedenti
+☐ Voce dei personaggi riconoscibile e coerente
+☐ Luoghi e ambientazioni descritti coerentemente
+
+═══ GESTIONE TRAME ═══
+☐ Trame irrisolte dal volume precedente gestite
+☐ Foreshadowing precedente utilizzato o mantenuto attivo
+☐ Promesse narrative in corso di risoluzione
+☐ Nessuna trama dimenticata senza motivo
+
+═══ ARCO DI SERIE ═══
+☐ La macro-trama è avanzata
+☐ L'escalation è credibile
+☐ I personaggi sono cresciuti rispetto al volume precedente
+☐ Il volume aggiunge qualcosa di nuovo (non è riempitivo)
+☐ Il lettore ha motivo per leggere il volume successivo
+
+═══ AUTONOMIA DEL VOLUME ═══
+☐ Un nuovo lettore può comprendere la storia? (se previsto)
+☐ Il recap è sufficiente ma non invasivo?
+☐ Il volume ha una propria trama con inizio, sviluppo e conclusione?
+
+═══ GIUDIZIO ═══
+[SEAMLESS / BUONO / ACCETTABILE / DISCONTINUITÀ RILEVATE]
+Note: [...]
+Azioni correttive: [...]
+```
+
+---
+
+## REGOLE DI SERIALIZZAZIONE
+
+### Per Fiction
+
+1. **Ogni volume deve avere un proprio arco narrativo** — il lettore deve sentire una risoluzione parziale
+2. **Il primo capitolo di ogni sequel** deve ri-orientare il lettore senza essere un riassunto noioso
+3. **L'escalation tra volumi** deve essere naturale, non inflazionistica
+4. **I personaggi devono crescere** volume per volume
+5. **I cliff-hanger di fine volume** devono essere significativi, non artificiali
+6. **Variazione dei pattern narrativi**: evitare di ripetere le stesse strutture di scena (es. lo stesso tipo di scontro, la stessa dinamica di risoluzione dei problemi) nei vari volumi per garantire molteplicità e freschezza.
+7. **La Bibbia di Continuità è sacra** — se qualcosa la contraddice, il GPT si ferma e segnala
+
+### Per Non-Fiction
+
+1. **Ogni volume deve essere autosufficiente** — valore anche senza gli altri
+2. **La progressione deve essere chiara** — il lettore sa cosa serve prima
+3. **La terminologia deve essere coerente** — stessi termini in tutta la collana
+4. **I riferimenti incrociati** devono essere espliciti e precisi
+5. **Il formato deve essere coerente** — stessa struttura tra volumi
+
+<!-- --- FINE CONTENUTO DA MACRO_01_SYSTEM_OPERATIONS --- -->
+
+
+## INTEGRAZIONE MERMAIDJS PER MAPPE VISIVE
+Quando devi presentare all'utente la **Mappa delle Relazioni** (Schema Relazionale della Bibbia di Continuità), non usare solo testo semplice.
+**Devi utilizzare la sintassi MermaidJS** all'interno di un blocco di codice markdown speciale per far disegnare il grafico direttamente a schermo.
+
+### Esempio d'uso Mermaid per le Fazioni e Relazioni:
+```markdown
+```mermaid
+graph TD
+    Protagonista("Protagonista (Nome)") -->|Mentore| PersonaggioA("Personaggio A")
+    PersonaggioA -->|Rivali| FazioneB{"Fazione Nemica"}
+    FazioneB -->|Cerca l'artefatto| Oggetto("L'Artefatto Antico")
+```
+```
+Assicurati sempre di testare visivamente la direzione (TD per Top-Down, LR per Left-Right) a seconda della complessità del grafico. Usa forme diverse per luoghi, oggetti e persone.

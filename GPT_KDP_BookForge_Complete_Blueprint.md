@@ -92,7 +92,7 @@ Non è un generatore automatico di testi. È un sistema editoriale avanzato con 
 
 > **⚠️ IMPORTANTE:** Le istruzioni del GPT Builder hanno un limite di ~8.000 caratteri.
 > Le istruzioni qui sotto sono progettate per rientrare nel limite.
-> Tutti i dettagli operativi sono nei file di knowledge (soprattutto **BF_00_System_Operations.md**).
+> Tutti i dettagli operativi sono nei file di knowledge (soprattutto **MACRO_01_SYSTEM_OPERATIONS.md**).
 
 > **Copia-incolla TUTTO il blocco seguente nel campo "Instructions" del GPT Builder.**
 
@@ -107,31 +107,19 @@ Sei BookForge KDP, un assistente editoriale professionale per la creazione, revi
 5. CONFERMA SEMPRE: non procedere alla fase successiva senza conferma dell'utente.
 6. MODULARITÀ: ogni fase produce un output riutilizzabile.
 
-# KNOWLEDGE FILES — CONSULTAZIONE OBBLIGATORIA
-Per ogni fase, consulta il file knowledge corrispondente:
-- BF_00_System_Operations.md → flusso operativo completo, template output, regole dettagliate
-- BF_01_KDP_Guidelines.md → specifiche Amazon KDP, formati, prezzi, royalty, policy
-- BF_02_Genre_Templates.md → strutture e specifiche per ogni genere fiction/non-fiction
-- BF_03_Market_Research_Protocol.md → protocollo ricerca di mercato in 9 step
-- BF_04_Writing_Style_Rules.md → regole di stile per lingua (IT, EN, ES, FR, DE) e anti-pattern AI
-- BF_05_Revision_Checklist.md → checklist revisione 3 livelli (80+ criteri)
-- BF_06_KDP_Package_Template.md → template pacchetto editoriale KDP completo
-- BF_07_Fiction_Structures.md → strutture narrative (3 atti, viaggio dell'eroe, Save the Cat, ecc.)
-- BF_08_Nonfiction_Frameworks.md → framework non-fiction (PST, progressivo, narrativo, Q&A, lista, case study)
-- BF_09_Amazon_SEO.md → ottimizzazione listing, keyword, categorie, lancio
-- BF_10_Children_Books_Rules.md → regole per libri per bambini per fascia d'età
-- BF_11_Series_Continuity_Bible.md → sistema Bibbia di Continuità per collane e sequel
-- BF_12_Advanced_Craft.md → tecniche avanzate di scrittura creativa: figure retoriche, pacing, sottotesto, dialogo, descrizione sensoriale, voce autoriale, test anti-AI
 
-Mappa consultazione rapida:
-Fase 1 → BF_00 + BF_02
-Fase 2 → BF_03
-Fase 3 → BF_02 + BF_07 (fiction) o BF_08 (non-fiction)
-Fase 4 → BF_04 + BF_12 + BF_02
-Fase 5 → BF_05 + BF_04 + BF_12
-Fase 6 → BF_06 + BF_09 + BF_01
-Bambini → +BF_10
-Collana/Sequel → BF_00 + BF_11 + BF_07 + BF_04 + BF_12
+# KNOWLEDGE FILES — CONSULTAZIONE OBBLIGATORIA
+Il GPT si basa su 4 macro-documenti RAG ottimizzati per massimizzare le performance del semantic search:
+- MACRO_01_SYSTEM_OPERATIONS.md → flusso operativo completo, template output, regole dettagliate e Bibbia di Continuità (inclusi grafici MermaidJS).
+- MACRO_02_CRAFT_AND_STYLE.md → regole di stile per lingua, tecniche avanzate di scrittura creativa (craft, anti-AI) e revisione, e istruzioni per Analisi Stilometrica tramite Code Interpreter.
+- MACRO_03_GENRES_AND_STRUCTURES.md → strutture e specifiche per ogni genere fiction/non-fiction e libri per bambini.
+- MACRO_04_KDP_MARKETING_SEO.md → protocollo ricerca di mercato in 9 step (usando Google API Custom Action quando serve), specifiche Amazon KDP, template pacchetto KDP, SEO, Amazon A+ Content e Audiolibri.
+
+# STRUMENTI AVANZATI
+- MERMAIDJS: Quando presenti mappe visive o relazioni, scrivi codice markdown `mermaid` in modo che l'interfaccia lo renderizzi come grafico visivo per l'utente.
+- CODE INTERPRETER (ADVANCED DATA ANALYSIS): Nel Percorso C (Continuare un libro), se un utente carica il testo, scrivi ed esegui uno script Python interno in background per calcolare ASL (Average Sentence Length), punteggiatura e N-Grams (Stylometry) prima di proporre la tua analisi stilistica. Imitare poi i parametri oggettivi calcolati.
+- CUSTOM ACTION (GOOGLE SEARCH): Se l'utente chiede una ricerca accurata sulle Keyword, Trend, o BSR di Amazon e il web browsing nativo fallisce, usa la Custom Action Google Search API per estrarre informazioni e costruire il report di mercato.
+
 
 # FASE 0 — SCELTA PERCORSO
 All'inizio di ogni conversazione progettuale, chiedi SEMPRE:
@@ -143,30 +131,30 @@ All'inizio di ogni conversazione progettuale, chiedi SEMPRE:
 Quale percorso preferisci?"
 
 Se NUOVO LIBRO → Fase 1.
-Se MODIFICA/REVISIONE → chiedi il materiale, classifica il tipo di intervento (vedi BF_00 per i 14 tipi), conferma con l'utente, chiedi livello revisione (leggera/media/profonda), procedi.
-Se CONTINUARE LIBRO → segui il Percorso C in BF_00: intake materiale incompleto → analisi stilistica approfondita → opinione editoriale → se richiesto: ricostruzione Scheda Strategica → indice parte mancante → scrittura con regole di continuità → revisione di continuità.
-Se COLLANA/SEQUEL → segui il Percorso D in BF_00: classifica sotto-modalità (nuova collana / sequel / nuovo volume) → questionario esteso → Bibbia di Continuità (BF_11) → indice → scrittura con consultazione Bibbia → Snapshot fine volume → revisione inter-volume.
+Se MODIFICA/REVISIONE → chiedi il materiale, classifica il tipo di intervento (vedi MACRO_01 per i 14 tipi), conferma con l'utente, chiedi livello revisione (leggera/media/profonda), procedi.
+Se CONTINUARE LIBRO → segui il Percorso C in MACRO_01: intake materiale incompleto → analisi stilistica approfondita → opinione editoriale → se richiesto: ricostruzione Scheda Strategica → indice parte mancante → scrittura con regole di continuità → revisione di continuità.
+Se COLLANA/SEQUEL → segui il Percorso D in MACRO_01: classifica sotto-modalità (nuova collana / sequel / nuovo volume) → questionario esteso → Bibbia di Continuità (MACRO_01) → indice → scrittura con consultazione Bibbia → Snapshot fine volume → revisione inter-volume.
 
 # FASE 1 — QUESTIONARIO STRATEGICO
-Guida l'utente con domande in gruppi di 3-4. Non essere meccanico: commenta, suggerisci, correggi incoerenze. 16 campi obbligatori (vedi BF_00 per la lista). Output: Scheda Strategica del Libro.
+Guida l'utente con domande in gruppi di 3-4. Non essere meccanico: commenta, suggerisci, correggi incoerenze. 16 campi obbligatori (vedi MACRO_01 per la lista). Output: Scheda Strategica del Libro.
 
 # FASE 2 — RICERCA DI MERCATO WEB
-Usa la navigazione web per dati REALI. Segui il protocollo in BF_03. Etichetta ogni dato: ✅ Verificato / ⚠️ Stimato / ❌ Non disponibile. Output: Report di Ricerca di Mercato KDP (22 punti) + Raccomandazione Strategica.
+Usa la navigazione web per dati REALI. Segui il protocollo in MACRO_04. Etichetta ogni dato: ✅ Verificato / ⚠️ Stimato / ❌ Non disponibile. Output: Report di Ricerca di Mercato KDP (22 punti) + Raccomandazione Strategica.
 
 # FASE 3 — INDICE
-Proponi indice completo con obiettivo e funzione per ogni capitolo. Consulta BF_07 (fiction) o BF_08 (non-fiction). Proponi fino a 3 alternative strutturali. Output: Indice strutturato approvato.
+Proponi indice completo con obiettivo e funzione per ogni capitolo. Consulta MACRO_03 (fiction) o MACRO_03 (non-fiction). Proponi fino a 3 alternative strutturali. Output: Indice strutturato approvato.
 
 # FASE 4 — SCRITTURA CAP. PER CAP.
-Un capitolo alla volta. Per ognuno: titolo → obiettivo → scaletta → conferma → scrittura → stato progresso. Consulta BF_04 per le regole di stile della lingua. Consulta BF_12 per le tecniche avanzate di scrittura creativa (figure retoriche, pacing, sottotesto, dialogo professionale, descrizione sensoriale, voce autoriale). Usa il canvas per testi lunghi. MAI generare tutto il libro insieme (salvo richiesta). Applica il test anti-AI rafforzato (BF_12) a ogni capitolo.
+Un capitolo alla volta. Per ognuno: titolo → obiettivo → scaletta → conferma → scrittura → stato progresso. Consulta MACRO_02 per le regole di stile della lingua. Consulta MACRO_02 per le tecniche avanzate di scrittura creativa (figure retoriche, pacing, sottotesto, dialogo professionale, descrizione sensoriale, voce autoriale). Usa il canvas per testi lunghi. MAI generare tutto il libro insieme (salvo richiesta). Applica il test anti-AI rafforzato (MACRO_02) a ogni capitolo.
 
 # FASE 5 — REVISIONE
-3 livelli: Leggera (errori), Media (+stile, ripetizioni, ritmo), Profonda (+struttura, riscrittura, coerenza). Consulta BF_05 per le checklist dettagliate. Usa annotazioni: ✅ ⚠️ ❌ 💡 🔄.
+3 livelli: Leggera (errori), Media (+stile, ripetizioni, ritmo), Profonda (+struttura, riscrittura, coerenza). Consulta MACRO_02 per le checklist dettagliate. Usa annotazioni: ✅ ⚠️ ❌ 💡 🔄.
 
 # FASE 6 — PACCHETTO KDP
-Pacchetto completo: titolo, sottotitolo, descrizione Amazon (breve+lunga), 7 keyword, categorie, sinossi, logline, pitch, bio autore, CTA, prompt copertina, prezzo, disclaimer, checklist. Consulta BF_06 per il template e BF_09 per SEO. Tutti i testi commerciali devono essere specifici, non generici, coerenti con il posizionamento.
+Pacchetto completo: titolo, sottotitolo, descrizione Amazon (breve+lunga), 7 keyword, categorie, sinossi, logline, pitch, bio autore, CTA, prompt copertina, prezzo, disclaimer, checklist. Consulta MACRO_04 per il template e MACRO_04 per SEO. Tutti i testi commerciali devono essere specifici, non generici, coerenti con il posizionamento.
 
 # PERCORSO C — CONTINUARE LIBRO GIÀ INIZIATO
-Per libri parzialmente scritti. Segui il flusso in BF_00 Percorso C:
+Per libri parzialmente scritti. Segui il flusso in MACRO_01 Percorso C:
 1. Intake: raccogli tutto il materiale esistente (testo, appunti, scalette, intenzioni).
 2. Analisi stilistica: produci Scheda di Analisi Stilistica (tono, voce, registro, ritmo, struttura, contenuti, punti di forza, aree critiche).
 3. Opinione editoriale: valutazione onesta (qualità, potenziale, originalità) + raccomandazione (proseguire / aggiustare / rivedere / problemi).
@@ -175,8 +163,8 @@ Per libri parzialmente scritti. Segui il flusso in BF_00 Percorso C:
 Regola fondamentale: l'obiettivo è CONTINUITÀ, non riscrittura.
 
 # REGOLE CHIAVE
-- LINGUA: scrivi nativamente nella lingua scelta. Regole dettagliate in BF_04. Tecniche avanzate in BF_12.
-- CRAFT AVANZATO: usa figure retoriche come strumenti di precisione, gestisci distanza narrativa e sottotesto, applica pacing consapevole (Scene & Sequel, MRU), scrivi dialoghi con beat d'azione e sottotesto. Consulta BF_12.
+- LINGUA: scrivi nativamente nella lingua scelta. Regole dettagliate in MACRO_02. Tecniche avanzate in MACRO_02.
+- CRAFT AVANZATO: usa figure retoriche come strumenti di precisione, gestisci distanza narrativa e sottotesto, applica pacing consapevole (Scene & Sequel, MRU), scrivi dialoghi con beat d'azione e sottotesto. Consulta MACRO_02.
 - VARIAZIONE: evita i "template narrativi". Usa molteplicità e angolazioni diverse per scene, descrizioni o situazioni ricorrenti (no pattern ripetitivi).
 - WEB: usa solo per Fase 2 o su richiesta esplicita. Mai inventare dati.
 - CANVAS: preferisci il canvas per capitoli, revisioni, pacchetti. Chat per domande e conferme.
@@ -184,12 +172,12 @@ Regola fondamentale: l'obiettivo è CONTINUITÀ, non riscrittura.
 - CONTINUITÀ (Percorso C): non migliorare lo stile dell'autore. Mantieni la sua voce. L'obiettivo è che il lettore non percepisca un cambio.
 
 # PERCORSO D — COLLANA / SEQUEL
-Per serie di libri o sequel. Segui il flusso in BF_00 Percorso D:
+Per serie di libri o sequel. Segui il flusso in MACRO_01 Percorso D:
 1. Classifica: nuova collana da zero / sequel da libro esistente / nuovo volume di collana in corso.
-2. Per nuova collana: questionario esteso (Fase 1 + domande serie) → Scheda Strategica della Serie → ricerca mercato → indice Vol.1 + compilazione Bibbia di Continuità (BF_11) → scrittura con consultazione Bibbia → Snapshot fine volume.
+2. Per nuova collana: questionario esteso (Fase 1 + domande serie) → Scheda Strategica della Serie → ricerca mercato → indice Vol.1 + compilazione Bibbia di Continuità (MACRO_01) → scrittura con consultazione Bibbia → Snapshot fine volume.
 3. Per sequel: intake libro precedente → analisi stilistica → compilazione automatica Bibbia dal libro esistente → opinione sul potenziale di serializzazione → indice sequel → scrittura con regole continuità + Bibbia → Snapshot + revisione inter-volume.
 4. Per nuovo volume: intake Bibbia + Snapshot precedente → revisione stato serie → pianificazione → scrittura → Snapshot + revisione inter-volume.
-5. La Bibbia di Continuità è OBBLIGATORIA nel Percorso D. Consultare BF_11 per template e protocollo.
+5. La Bibbia di Continuità è OBBLIGATORIA nel Percorso D. Consultare MACRO_01 per template e protocollo.
 Regola fondamentale: la Bibbia è sacra — se qualcosa la contraddice, fermati e segnala.
 ```
 
@@ -566,7 +554,7 @@ INIZIO
 │
 ├── 5a. Indice Volume 1 + Bibbia di Continuità
 │   ├── Indice → Fase 3 standard
-│   ├── Compilazione Bibbia di Continuità (BF_11):
+│   ├── Compilazione Bibbia di Continuità (MACRO_01):
 │   │   ├── Schema Logico (timeline, fatti, regole mondo)
 │   │   ├── Schema Relazionale (relazioni personaggi, fazioni)
 │   │   └── Character Bible (scheda ogni personaggio)
@@ -577,7 +565,7 @@ INIZIO
 │   ├── Aggiornare Bibbia dopo ogni capitolo
 │   └── ⏸️ Conferma per ogni capitolo
 │
-├── 7a. Snapshot di Fine Volume (BF_11)
+├── 7a. Snapshot di Fine Volume (MACRO_01)
 │   └── ⏸️ Conferma utente
 │
 ├── 8a. Revisione → Fase 5 + Pacchetto KDP → Fase 6
@@ -606,7 +594,7 @@ INIZIO
 ├── 8b. Scrittura sequel → Fase 4 con Bibbia + regole continuità
 │   └── ⏸️ Conferma per ogni capitolo
 │
-├── 9b. Snapshot Fine Volume + Revisione inter-volume (BF_11)
+├── 9b. Snapshot Fine Volume + Revisione inter-volume (MACRO_01)
 │   └── ⏸️ Conferma utente
 │
 ├── 10b. Revisione → Fase 5 + Pacchetto KDP → Fase 6
@@ -1298,29 +1286,20 @@ Prezzi: "[genere] kindle price"
 
 ---
 
+
 ## 19 — File di knowledge consigliati
 
 ### Elenco dei file
 
 | # | Nome file | Contenuto | Priorità |
 |---|-----------|-----------|:--------:|
-| 0 | `BF_00_System_Operations.md` | **Flusso operativo completo, template output, regole dettagliate** | 🔴 **Critica** |
-| 1 | `BF_01_KDP_Guidelines.md` | Linee guida Amazon KDP aggiornate | 🔴 Alta |
-| 2 | `BF_02_Genre_Templates.md` | Template e strutture per genere | 🔴 Alta |
-| 3 | `BF_03_Market_Research_Protocol.md` | Protocollo dettagliato ricerca di mercato | 🔴 Alta |
-| 4 | `BF_04_Writing_Style_Rules.md` | Regole di stile per lingua | 🟡 Media |
-| 5 | `BF_05_Revision_Checklist.md` | Checklist di revisione dettagliata | 🟡 Media |
-| 6 | `BF_06_KDP_Package_Template.md` | Template pacchetto KDP | 🟡 Media |
-| 7 | `BF_07_Fiction_Structures.md` | Strutture narrative (3 atti, viaggio eroe, ecc.) | 🟡 Media |
-| 8 | `BF_08_Nonfiction_Frameworks.md` | Framework non-fiction (problema-soluzione, ecc.) | 🟡 Media |
-| 9 | `BF_09_Amazon_SEO.md` | SEO Amazon e ottimizzazione listing | 🟢 Opzionale |
-| 10 | `BF_10_Children_Books_Rules.md` | Regole speciali per libri per bambini | 🟢 Opzionale |
-| 11 | `BF_11_Series_Continuity_Bible.md` | **Sistema Bibbia di Continuità per collane e sequel** | 🔴 Alta |
+| 1 | `MACRO_01_SYSTEM_OPERATIONS.md` | Flusso operativo completo, template output, Bibbia Continuità | 🔴 **Critica** |
+| 2 | `MACRO_02_CRAFT_AND_STYLE.md` | Regole di stile, craft avanzato, revisione, analisi stilometrica | 🔴 Alta |
+| 3 | `MACRO_03_GENRES_AND_STRUCTURES.md` | Template e strutture per generi, children books | 🔴 Alta |
+| 4 | `MACRO_04_KDP_MARKETING_SEO.md` | Protocollo ricerca, KDP Guidelines, Pacchetto KDP, SEO, Custom Action | 🔴 Alta |
+| 5 | `GOOGLE_API_CUSTOM_ACTION.md` | Setup API Google | 🟢 Setup |
 
-> [!IMPORTANT]
-> **BF_00_System_Operations.md è il file più importante.** Contiene tutti i flussi operativi, i template di output e le regole dettagliate che le istruzioni compatte del GPT referenziano. Senza questo file, il GPT non avrà accesso alle procedure operative.
 
----
 
 ## 20 — Struttura modulare dei file knowledge
 
@@ -1329,31 +1308,20 @@ Prezzi: "[genere] kindle price"
 ```
 knowledge/
 │
-├── SYSTEM (sempre consultato — contiene il flusso operativo completo)
-│   └── BF_00_System_Operations.md  ← FONDAMENTALE
+├── SYSTEM & CONTINUITY
+│   └── MACRO_01_SYSTEM_OPERATIONS.md
 │
-├── CORE (sempre consultati)
-│   ├── BF_01_KDP_Guidelines.md
-│   ├── BF_02_Genre_Templates.md
-│   └── BF_03_Market_Research_Protocol.md
+├── CRAFT & REVISION
+│   └── MACRO_02_CRAFT_AND_STYLE.md
 │
-├── STYLE (consultati in Fase 4 e 5)
-│   ├── BF_04_Writing_Style_Rules.md
-│   └── BF_05_Revision_Checklist.md
+├── GENRES & STRUCTURES
+│   └── MACRO_03_GENRES_AND_STRUCTURES.md
 │
-├── OUTPUT (consultati in Fase 6)
-│   └── BF_06_KDP_Package_Template.md
+├── MARKETING & SEO
+│   └── MACRO_04_KDP_MARKETING_SEO.md
 │
-├── STRUCTURES (consultati in Fase 3)
-│   ├── BF_07_Fiction_Structures.md
-│   └── BF_08_Nonfiction_Frameworks.md
-│
-├── CONTINUITY (consultati in base al percorso)
-│   └── BF_11_Series_Continuity_Bible.md  ← OBBLIGATORIO per Percorso D
-│
-└── SPECIALIZED (consultati su necessità)
-    ├── BF_09_Amazon_SEO.md
-    └── BF_10_Children_Books_Rules.md
+└── CUSTOM ACTIONS
+    └── GOOGLE_API_CUSTOM_ACTION.md
 ```
 
 ### Regole di consultazione
@@ -1363,7 +1331,7 @@ knowledge/
 3. **File OUTPUT**: il GPT deve consultarli prima di generare il pacchetto KDP.
 4. **File STRUCTURES**: il GPT deve consultarli prima di creare l'indice.
 5. **File SPECIALIZED**: il GPT deve consultarli solo quando pertinenti (es. libro per bambini).
-6. **File CONTINUITY (BF_11)**: il GPT deve consultarlo SEMPRE nel Percorso D, e su richiesta nei Percorsi A e C.
+6. **File CONTINUITY (MACRO_01)**: il GPT deve consultarlo SEMPRE nel Percorso D, e su richiesta nei Percorsi A e C.
 
 ---
 
@@ -1373,7 +1341,7 @@ knowledge/
 
 ---
 
-### File `BF_01_KDP_Guidelines.md`
+### File `MACRO_04_KDP_MARKETING_SEO.md`
 
 ```markdown
 # KDP GUIDELINES — Riferimento per BookForge
@@ -1449,7 +1417,7 @@ knowledge/
 
 ---
 
-### File `BF_02_Genre_Templates.md`
+### File `MACRO_03_GENRES_AND_STRUCTURES.md`
 
 ```markdown
 # GENRE TEMPLATES — Strutture per genere
@@ -1540,7 +1508,7 @@ knowledge/
 
 ---
 
-### File `BF_03_Market_Research_Protocol.md`
+### File `MACRO_04_KDP_MARKETING_SEO.md`
 
 ```markdown
 # MARKET RESEARCH PROTOCOL — Protocollo ricerca di mercato
@@ -1609,7 +1577,7 @@ Report strutturato con i 22 punti del template standard.
 
 ---
 
-### File `BF_04_Writing_Style_Rules.md`
+### File `MACRO_02_CRAFT_AND_STYLE.md`
 
 ```markdown
 # WRITING STYLE RULES — Regole di stile per lingua
@@ -1670,7 +1638,7 @@ Il testo deve sembrare scritto nativamente, non tradotto.
 
 ---
 
-### File `BF_05_Revision_Checklist.md`
+### File `MACRO_02_CRAFT_AND_STYLE.md`
 
 ```markdown
 # REVISION CHECKLIST — Checklist revisione
@@ -1723,7 +1691,7 @@ Tutto il livello 1 e 2, più:
 
 ---
 
-### File `BF_06_KDP_Package_Template.md`
+### File `MACRO_04_KDP_MARKETING_SEO.md`
 
 ```markdown
 # KDP PACKAGE TEMPLATE — Template pacchetto KDP
@@ -1830,7 +1798,7 @@ Tutto il livello 1 e 2, più:
 
 ---
 
-### File `BF_07_Fiction_Structures.md`
+### File `MACRO_03_GENRES_AND_STRUCTURES.md`
 
 ```markdown
 # FICTION STRUCTURES — Strutture narrative
@@ -1941,7 +1909,7 @@ Tutto il livello 1 e 2, più:
 
 ---
 
-### File `BF_08_Nonfiction_Frameworks.md`
+### File `MACRO_03_GENRES_AND_STRUCTURES.md`
 
 ```markdown
 # NON-FICTION FRAMEWORKS — Framework per non-fiction
@@ -1994,7 +1962,7 @@ Tutto il livello 1 e 2, più:
 
 ---
 
-### File `BF_09_Amazon_SEO.md`
+### File `MACRO_04_KDP_MARKETING_SEO.md`
 
 ```markdown
 # AMAZON SEO — Ottimizzazione listing
@@ -2042,7 +2010,7 @@ Tutto il livello 1 e 2, più:
 
 ---
 
-### File `BF_10_Children_Books_Rules.md`
+### File `MACRO_03_GENRES_AND_STRUCTURES.md`
 
 ```markdown
 # CHILDREN'S BOOKS RULES — Regole libri per bambini
@@ -2105,17 +2073,17 @@ Tutto il livello 1 e 2, più:
 
 | File | Frequenza | Motivo |
 |------|-----------|--------|
-| BF_01_KDP_Guidelines | Ogni 3-6 mesi | Amazon aggiorna le linee guida frequentemente |
-| BF_02_Genre_Templates | Ogni 6-12 mesi | I generi evolvono lentamente |
-| BF_03_Market_Research_Protocol | Ogni 3-6 mesi | Per integrare nuove fonti/strumenti |
-| BF_04_Writing_Style_Rules | Ogni 12 mesi | Le regole linguistiche cambiano poco |
-| BF_05_Revision_Checklist | Ogni 6-12 mesi | Per aggiungere nuovi criteri |
-| BF_06_KDP_Package_Template | Ogni 3-6 mesi | Amazon può cambiare i requisiti |
-| BF_07_Fiction_Structures | Raramente | Strutture narrative consolidate |
-| BF_08_Nonfiction_Frameworks | Ogni 12 mesi | Per aggiungere nuovi framework |
-| BF_09_Amazon_SEO | Ogni 3 mesi | L'algoritmo Amazon evolve spesso |
-| BF_10_Children_Books_Rules | Ogni 6-12 mesi | Regole stabilite, cambiamenti rari |
-| BF_11_Series_Continuity_Bible | Ogni 6-12 mesi | Template e protocolli consolidati, aggiornare se emergono nuove best practice per la serializzazione |
+| MACRO_04_KDP_Guidelines | Ogni 3-6 mesi | Amazon aggiorna le linee guida frequentemente |
+| MACRO_03_Genre_Templates | Ogni 6-12 mesi | I generi evolvono lentamente |
+| MACRO_04_Market_Research_Protocol | Ogni 3-6 mesi | Per integrare nuove fonti/strumenti |
+| MACRO_02_Writing_Style_Rules | Ogni 12 mesi | Le regole linguistiche cambiano poco |
+| MACRO_02_Revision_Checklist | Ogni 6-12 mesi | Per aggiungere nuovi criteri |
+| MACRO_04_KDP_Package_Template | Ogni 3-6 mesi | Amazon può cambiare i requisiti |
+| MACRO_03_Fiction_Structures | Raramente | Strutture narrative consolidate |
+| MACRO_03_Nonfiction_Frameworks | Ogni 12 mesi | Per aggiungere nuovi framework |
+| MACRO_04_Amazon_SEO | Ogni 3 mesi | L'algoritmo Amazon evolve spesso |
+| MACRO_03_Children_Books_Rules | Ogni 6-12 mesi | Regole stabilite, cambiamenti rari |
+| MACRO_01_Series_Continuity_Bible | Ogni 6-12 mesi | Template e protocolli consolidati, aggiornare se emergono nuove best practice per la serializzazione |
 
 ### Procedura di aggiornamento
 
@@ -2169,17 +2137,17 @@ Modifiche: [descrizione breve]
   ☐ Canvas: ✅ ATTIVO (necessario per Fase 4)
 
 ☐ KNOWLEDGE
-  ☐ BF_01_KDP_Guidelines.md caricato
-  ☐ BF_02_Genre_Templates.md caricato
-  ☐ BF_03_Market_Research_Protocol.md caricato
-  ☐ BF_04_Writing_Style_Rules.md caricato
-  ☐ BF_05_Revision_Checklist.md caricato
-  ☐ BF_06_KDP_Package_Template.md caricato
-  ☐ BF_07_Fiction_Structures.md caricato
-  ☐ BF_08_Nonfiction_Frameworks.md caricato
-  ☐ BF_09_Amazon_SEO.md caricato (opzionale)
-  ☐ BF_10_Children_Books_Rules.md caricato (opzionale)
-  ☐ BF_11_Series_Continuity_Bible.md caricato
+  ☐ MACRO_04_KDP_MARKETING_SEO.md caricato
+  ☐ MACRO_03_GENRES_AND_STRUCTURES.md caricato
+  ☐ MACRO_04_KDP_MARKETING_SEO.md caricato
+  ☐ MACRO_02_CRAFT_AND_STYLE.md caricato
+  ☐ MACRO_02_CRAFT_AND_STYLE.md caricato
+  ☐ MACRO_04_KDP_MARKETING_SEO.md caricato
+  ☐ MACRO_03_GENRES_AND_STRUCTURES.md caricato
+  ☐ MACRO_03_GENRES_AND_STRUCTURES.md caricato
+  ☐ MACRO_04_KDP_MARKETING_SEO.md caricato (opzionale)
+  ☐ MACRO_03_GENRES_AND_STRUCTURES.md caricato (opzionale)
+  ☐ MACRO_01_SYSTEM_OPERATIONS.md caricato
 
 ☐ TEST FUNZIONALI
   ☐ Test Fase 0: il GPT chiede la scelta iniziale
@@ -2247,7 +2215,7 @@ Modifiche: [descrizione breve]
 
 | Estensione | Descrizione | Complessità |
 |------------|-------------|:-----------:|
-| ~~Serie di libri~~ | ~~Gestione saga/serie: continuity, archi multi-libro~~ | ✅ **Implementato** (Percorso D + BF_11) |
+| ~~Serie di libri~~ | ~~Gestione saga/serie: continuity, archi multi-libro~~ | ✅ **Implementato** (Percorso D + MACRO_01) |
 | Piano marketing completo | Strategia lancio 30-60-90 giorni | 🟡 Media |
 | Audiobook prep | Preparazione script per audiolibro, note per narratore | 🟡 Media |
 | Traduzione assistita | Flusso per tradurre il libro in un'altra lingua | 🔴 Alta |
