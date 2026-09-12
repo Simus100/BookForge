@@ -1,0 +1,62 @@
+{
+  "schema_version": "2.0",
+  "bookforge_version": "7.7.0",
+  "project": {
+    "id": "demo",
+    "title": "Esempio tecnico vuoto",
+    "language": "it",
+    "type": "fiction"
+  },
+  "revision": 0,
+  "workflow": {
+    "phase": 1,
+    "mode": "guided",
+    "delegations": []
+  },
+  "resume_cursor": {
+    "volume_id": null,
+    "chapter_id": null,
+    "scene_id": null,
+    "beat": null,
+    "granularity": "chapter",
+    "last_confirmed": "",
+    "next_action": "Compilare il brief del proprio progetto"
+  },
+  "volumes": [],
+  "chapters": [],
+  "scenes": [],
+  "characters": [],
+  "files": [],
+  "facts": [],
+  "promises": [],
+  "decisions": [],
+  "styledna": {
+    "profile": "",
+    "axes": {
+      "SL": null,
+      "SC": null,
+      "RV": null,
+      "VR": null,
+      "RL": null,
+      "FD": null,
+      "ST": null,
+      "SD": null,
+      "DW": null,
+      "ET": null,
+      "SUB": null,
+      "AP": null
+    },
+    "note": ""
+  },
+  "voice_fingerprint": {
+    "golden_samples": [],
+    "idiolect": {},
+    "baseline": {}
+  },
+  "narrative_state": {},
+  "migration": {
+    "status": "clear",
+    "notes": []
+  },
+  "legacy_payload": null
+}

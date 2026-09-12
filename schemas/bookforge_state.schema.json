@@ -1,0 +1,678 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "BookForge state 2.0",
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "const": "2.0",
+      "type": "string"
+    },
+    "bookforge_version": {
+      "const": "7.7.0",
+      "type": "string"
+    },
+    "project": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,79}$"
+        },
+        "title": {
+          "type": "string"
+        },
+        "language": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string",
+          "enum": [
+            "fiction",
+            "non-fiction",
+            "other"
+          ]
+        }
+      },
+      "required": [
+        "id",
+        "title",
+        "language",
+        "type"
+      ],
+      "additionalProperties": false
+    },
+    "revision": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "workflow": {
+      "type": "object",
+      "properties": {
+        "phase": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 7
+        },
+        "mode": {
+          "type": "string",
+          "enum": [
+            "guided",
+            "operative"
+          ]
+        },
+        "delegations": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "phase",
+        "mode",
+        "delegations"
+      ],
+      "additionalProperties": false
+    },
+    "resume_cursor": {
+      "type": "object",
+      "properties": {
+        "volume_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "chapter_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "scene_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "beat": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "granularity": {
+          "type": "string",
+          "enum": [
+            "chapter",
+            "scene",
+            "beat"
+          ]
+        },
+        "last_confirmed": {
+          "type": "string"
+        },
+        "next_action": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "volume_id",
+        "chapter_id",
+        "scene_id",
+        "beat",
+        "granularity",
+        "last_confirmed",
+        "next_action"
+      ],
+      "additionalProperties": false
+    },
+    "volumes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,79}$"
+          },
+          "title": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "title"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "chapters": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,79}$"
+          },
+          "volume_id": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,79}$"
+          },
+          "number": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "title": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "planned",
+              "draft",
+              "revised",
+              "accepted",
+              "discarded"
+            ]
+          },
+          "summary": {
+            "type": "string"
+          },
+          "file_id": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "accepted_ref": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "required": [
+          "id",
+          "volume_id",
+          "number",
+          "title",
+          "status",
+          "summary",
+          "file_id",
+          "accepted_ref"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "scenes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,79}$"
+          },
+          "chapter_id": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,79}$"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "planned",
+              "draft",
+              "revised",
+              "accepted",
+              "discarded"
+            ]
+          },
+          "summary": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "chapter_id",
+          "status",
+          "summary"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "characters": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,79}$"
+          },
+          "name": {
+            "type": "string"
+          },
+          "profile": {
+            "type": "object"
+          }
+        },
+        "required": [
+          "id",
+          "name",
+          "profile"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "files": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,79}$"
+          },
+          "path": {
+            "type": "string",
+            "minLength": 1
+          },
+          "sha256": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          },
+          "role": {
+            "type": "string",
+            "enum": [
+              "chapter",
+              "voice",
+              "canon",
+              "notes"
+            ]
+          },
+          "required_for_resume": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "id",
+          "path",
+          "sha256",
+          "role",
+          "required_for_resume"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "facts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,79}$"
+          },
+          "kind": {
+            "type": "string",
+            "enum": [
+              "canon",
+              "rule",
+              "belief",
+              "knowledge",
+              "hypothesis"
+            ]
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "proposed",
+              "approved",
+              "superseded"
+            ]
+          },
+          "statement": {
+            "type": "string"
+          },
+          "source": {
+            "type": "string"
+          },
+          "source_chapter_id": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "known_by": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,79}$"
+            }
+          },
+          "reader_knows": {
+            "type": "boolean"
+          },
+          "approval": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "supersedes": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "required": [
+          "id",
+          "kind",
+          "status",
+          "statement",
+          "source",
+          "source_chapter_id",
+          "known_by",
+          "reader_knows",
+          "approval",
+          "supersedes"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "promises": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,79}$"
+          },
+          "statement": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "open",
+              "fulfilled",
+              "deferred",
+              "dropped"
+            ]
+          },
+          "opened_in": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "resolved_in": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "decision": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "required": [
+          "id",
+          "statement",
+          "status",
+          "opened_in",
+          "resolved_in",
+          "decision"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "decisions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,79}$"
+          },
+          "summary": {
+            "type": "string"
+          },
+          "approval": {
+            "type": "string",
+            "minLength": 1
+          },
+          "at": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "summary",
+          "approval",
+          "at"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "styledna": {
+      "type": "object",
+      "properties": {
+        "profile": {
+          "type": "string"
+        },
+        "axes": {
+          "type": "object",
+          "properties": {
+            "SL": {
+              "type": [
+                "integer",
+                "null"
+              ],
+              "minimum": 1,
+              "maximum": 10
+            },
+            "SC": {
+              "type": [
+                "integer",
+                "null"
+              ],
+              "minimum": 1,
+              "maximum": 10
+            },
+            "RV": {
+              "type": [
+                "integer",
+                "null"
+              ],
+              "minimum": 1,
+              "maximum": 10
+            },
+            "VR": {
+              "type": [
+                "integer",
+                "null"
+              ],
+              "minimum": 1,
+              "maximum": 10
+            },
+            "RL": {
+              "type": [
+                "integer",
+                "null"
+              ],
+              "minimum": 1,
+              "maximum": 10
+            },
+            "FD": {
+              "type": [
+                "integer",
+                "null"
+              ],
+              "minimum": 1,
+              "maximum": 10
+            },
+            "ST": {
+              "type": [
+                "integer",
+                "null"
+              ],
+              "minimum": 1,
+              "maximum": 10
+            },
+            "SD": {
+              "type": [
+                "integer",
+                "null"
+              ],
+              "minimum": 1,
+              "maximum": 10
+            },
+            "DW": {
+              "type": [
+                "integer",
+                "null"
+              ],
+              "minimum": 1,
+              "maximum": 10
+            },
+            "ET": {
+              "type": [
+                "integer",
+                "null"
+              ],
+              "minimum": 1,
+              "maximum": 10
+            },
+            "SUB": {
+              "type": [
+                "integer",
+                "null"
+              ],
+              "minimum": 1,
+              "maximum": 10
+            },
+            "AP": {
+              "type": [
+                "integer",
+                "null"
+              ],
+              "minimum": 1,
+              "maximum": 10
+            }
+          },
+          "required": [
+            "SL",
+            "SC",
+            "RV",
+            "VR",
+            "RL",
+            "FD",
+            "ST",
+            "SD",
+            "DW",
+            "ET",
+            "SUB",
+            "AP"
+          ],
+          "additionalProperties": false
+        },
+        "note": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "profile",
+        "axes",
+        "note"
+      ],
+      "additionalProperties": false
+    },
+    "voice_fingerprint": {
+      "type": "object",
+      "properties": {
+        "golden_samples": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "idiolect": {
+          "type": "object"
+        },
+        "baseline": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "golden_samples",
+        "idiolect",
+        "baseline"
+      ],
+      "additionalProperties": false
+    },
+    "narrative_state": {
+      "type": "object"
+    },
+    "migration": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "type": "string",
+          "enum": [
+            "clear",
+            "review_required"
+          ]
+        },
+        "notes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "status",
+        "notes"
+      ],
+      "additionalProperties": false
+    },
+    "legacy_payload": {
+      "type": [
+        "object",
+        "null"
+      ]
+    }
+  },
+  "required": [
+    "schema_version",
+    "bookforge_version",
+    "project",
+    "revision",
+    "workflow",
+    "resume_cursor",
+    "volumes",
+    "chapters",
+    "scenes",
+    "characters",
+    "files",
+    "facts",
+    "promises",
+    "decisions",
+    "styledna",
+    "voice_fingerprint",
+    "narrative_state",
+    "migration",
+    "legacy_payload"
+  ],
+  "additionalProperties": false
+}

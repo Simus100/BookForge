@@ -1,0 +1,4 @@
+interface:
+  display_name: "BookForge"
+  short_description: "Scrivi libri con voce, metodo e continuità"
+  default_prompt: "Usa $bookforge per continuare il mio manoscritto conservando voce e continuità."

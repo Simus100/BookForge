@@ -1,0 +1,63 @@
+{
+  "release": "7.7.0",
+  "repository_base_commit": "963f6a2dbaa66f2777e419ec8324cbd3827c0b67",
+  "inputs": [
+    {
+      "source": "continuita.md",
+      "sha256": "c65d69efa05a143372760109e201e779563d327659fea24ea3f74cc27c94c236"
+    },
+    {
+      "source": "fasi.md",
+      "sha256": "e81712abae451a83b5cf5b6b445bcf3470f29768ed29b6e94459d6a10412b227"
+    },
+    {
+      "source": "generi.md",
+      "sha256": "185eae0cba4b135c97bb5aa41af2d733fb73a1df716323dc902df81cdb7a864b"
+    },
+    {
+      "source": "anti-ai.md",
+      "sha256": "fc4ee4462775ddd33da72afac6fccab73c2e2dc73d18159d3bf98d48ac49385e"
+    },
+    {
+      "source": "percorsi.md",
+      "sha256": "3463b2b8bcf3461c93c72be3b4bb125165b51fc76d866d55d65cc8fdb732c66c"
+    },
+    {
+      "source": "psicologia.md",
+      "sha256": "69259084020d3fff6f1721bbfbd1e23cce6dd3d815176a490626f6ed5ab716a4"
+    },
+    {
+      "source": "kdp.md",
+      "sha256": "69ee297f2ea0365c853ce2b8459e2263d61e0fb8c614497f3214883b119f9760"
+    },
+    {
+      "source": "carta.md",
+      "sha256": "2e374b029260c9b76ce5f921b5176aa6ea4841c0ee200520f7403cee7169c6b6"
+    },
+    {
+      "source": "scrittura.md",
+      "sha256": "956e21969349fd56b72a955cf92f0f1fa29e2d9e83db1e101223b21e7a4125d9"
+    },
+    {
+      "source": "antologia.md",
+      "sha256": "840da4f7bcf231ee17e674341b04e677c90c5b70071a841f3e9b4b8f4e6f2702"
+    },
+    {
+      "source": "styledna.md",
+      "sha256": "574e8ae92c8d2aeadc2a8500774b41889fcdb00ae4da8b430aed6317c774c6ff"
+    },
+    {
+      "source": "stato-bsr.md",
+      "sha256": "829ce3db85168b962ba20571205e4275ed33257e171168b399d9c7ac2bc2b5c6"
+    },
+    {
+      "source": "stylometry.py",
+      "sha256": "0d1c58a7af7f453e371807422d40e5e6968fcfcb4074bb6c68b83c6436c5d09a"
+    },
+    {
+      "source": "llm-scrittura-creativa.md",
+      "sha256": "d9cd1b93d2ff44f6daccb30acb71ea1f57a9a5e63d0aa9b7ded31d2d09cf7f22",
+      "role": "consigli non vincolanti"
+    }
+  ]
+}
