@@ -5,6 +5,7 @@ Questo documento spiega come abilitare la ricerca tramite **Google Search API** 
 ## 1. OTTENERE LE CREDENZIALI (Gratuito)
 
 Hai bisogno di due cose:
+
 1. **API Key (Google Cloud)**:
    - Vai su Google Cloud Console.
    - Crea un nuovo progetto.
@@ -47,12 +48,6 @@ paths:
           required: true
           schema:
             type: string
-        - name: key
-          in: query
-          description: La tua API Key di Google Cloud.
-          required: true
-          schema:
-            type: string
         - name: num
           in: query
           description: Numero di risultati (max 10).
@@ -70,5 +65,16 @@ paths:
 ```
 
 ### 3. ISTRUZIONI FINALI
-Nel Prompt principale, ChatGPT è già istruito a usare la funzione `searchGoogle` passando sempre nella query i parametri fissi `cx` (inserisci qui il tuo id nel prompt master) e `key` (inserisci qui la chiave nel prompt master).
-*(Nota: per maggiore sicurezza, la chiave può essere inserita in "Authentication" impostata su "API Key" usando "Custom", nominandola `key` nel Custom GPT, ma passare il parametro fisso è più immediato).*
+
+Nel Prompt principale, ChatGPT è già istruito a usare la funzione `searchGoogle` passando sempre nella query il parametro fisso `cx` (inserisci qui il tuo id nel prompt master).
+
+**IMPORTANTE (SICUREZZA):** Per passare in modo sicuro la tua API Key di Google Cloud a ChatGPT:
+
+1. Sotto le impostazioni di **Authentication** (nella pagina in cui crei l'Action), clicca sull'icona a forma di ingranaggio.
+2. Scegli **API Key**.
+3. Sotto **Auth Type**, scegli **Custom**.
+4. Sotto **Custom Header Name**, scrivi `X-Goog-Api-Key` o `key` a seconda di cosa viene supportato, o imposta **Auth Type** su **Query** se necessario. L'approccio migliore e più sicuro in ChatGPT è selezionare **API Key**, Auth Type **Custom**, nominandola `key` (che in Custom si mapperà in query auth, o in alternative usare Auth Type **Bearer**). Il modo più pulito che Custom GPT supporta per le query params è:
+   - Scegliere "API Key" e impostare come nome "key" se l'API si aspetta la query, ma l'interfaccia corrente consiglia di inserirlo via "Custom" come header, ad esempio `X-Goog-Api-Key`.
+   - L'impostazione raccomandata: Scegli **API Key** -> seleziona **Custom** come tipo -> nel campo `Custom Header Name` inserisci `X-Goog-Api-Key` -> inserisci la tua API Key. Google Custom Search accetta l'API Key come header `X-Goog-Api-Key`.
+
+**Non inserire MAI l'API Key direttamente nel Prompt principale (Master Prompt)**, per evitare che gli utenti possano estrarla con prompt injection e utilizzarla in modo improprio per esaurire le tue quote API.
