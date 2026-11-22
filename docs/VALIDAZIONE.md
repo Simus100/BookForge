@@ -1,5 +1,7 @@
 # Verifiche della release 7.7.0
 
+> Le verifiche della 7.8.x (confronto 7.7/7.8 sui casi in `evals/`, audit 7.8.1 e tavolozza 7.8.2) sono in [MODIFICHE_7.8.md](MODIFICHE_7.8.md). Schema dello stato, script e test sono invariati dalla 7.7.0, quindi i risultati qui sotto restano validi.
+
 Data: 12 settembre 2026. Le prove tecniche e il controllo qualitativo descritti qui sono distinti da un benchmark editoriale con lettori reali.
 
 ## Test automatici

@@ -1,4 +1,4 @@
-# Valutazione editoriale · BookForge 7.7
+# Valutazione editoriale · BookForge 7.8
 
 Una metrica di superficie non certifica qualità, originalità o provenienza umana. Separa osservazioni sul testo, inferenze del modello e preferenze di persone reali.
 
@@ -17,6 +17,27 @@ Una metrica di superficie non certifica qualità, originalità o provenienza uma
 | Non-fiction | Tesi, evidenze, fonti, progressione e utilità sono adeguate al lettore? |
 
 Per un rilievo indica posizione, effetto, gravità (bloccante per il compito / importante / locale), intervento e scelta da preservare. «Importante» significa effetto concreto su lettura o mandato, non mancato rispetto di una quota. Se richiesti punteggi, ancora ogni voto a esempi e non nascondere dimensioni deboli in una media complessiva.
+
+## Controlli di mestiere (sì/no)
+
+Liste di domande binarie, adattate dai test con cui esperti hanno confrontato racconti professionali e racconti generati, mostrano dove i modelli cedono di più: originalità della forma, livelli di senso (superficie e sottotesto), uso maturo di figure e allusioni, idee prive di cliché. Usale come diagnosi con evidenze nel testo, non come voto.
+
+1. Compressione e dilatazione del tempo sono equilibrate?
+2. Scena e sommario sono dosati con consapevolezza?
+3. Le figure sono precise e funzionano anche alla lettera?
+4. Il finale è guadagnato, non arbitrario o brusco?
+5. Gli elementi formano un insieme unitario?
+6. Le prospettive, anche quelle sgradevoli, sono rese in modo convincente?
+7. Interiorità ed esteriorità sono in equilibrio?
+8. Ci sono svolte sorprendenti e appropriate?
+9. Il lettore porta via un'idea non banale?
+10. Il testo è libero da cliché di immagine, reazione e situazione?
+11. La forma ha qualcosa di proprio?
+12. Il mondo è credibile a livello sensoriale?
+13. Ogni personaggio ha la complessità che gli serve e nessuno esiste solo per la trama?
+14. Il testo lavora su più livelli di senso?
+
+**Limiti dei giudizi automatici.** Un modello che valuta tende a premiare il testo più lungo, quello presentato per primo o per ultimo, quello più fluido e familiare e quello simile al proprio stile. Nei confronti pareggia le lunghezze, randomizza e nascondi l'ordine, chiedi motivazioni ancorate a passaggi precisi. La decisione finale resta all'orecchio dell'autore e ai lettori reali.
 
 ## Confronto esplorativo
 

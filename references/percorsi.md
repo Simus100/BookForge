@@ -1,4 +1,4 @@
-# Percorsi e comandi · BookForge 7.7
+# Percorsi e comandi · BookForge 7.8
 
 Dedurre il percorso dalla richiesta; chiedere soltanto quando ambiguo. Preservare le deleghe e le scelte precedenti.
 
@@ -20,6 +20,6 @@ L'accettazione del testo e l'approvazione di nuovi fatti sono eventi distinti. P
 
 ## Comandi disponibili come scorciatoie
 
-`/scheda`, `/ricerca`, `/indice`, `/scrivi`, `/revisione`, `/kdp` (alias `/pacchetto`), `/lancio`, `/seo`: fasi e KDP. `/personaggio`, `/worldbuilding`: costruzione del progetto. `/clone`: calibrazione da testo. `/granularita capitolo|scena|beat`, `/scena`, `/beat`: unità di lavoro. `/lettore`: lettura critica. `/canon`: coerenza. `/salva`, `/carica`, `/stato`, `/diagrammi`: gestione del progetto. Questi comandi non richiedono parser dedicato: sono richieste in linguaggio naturale.
+`/scheda`, `/ricerca`, `/indice`, `/scrivi`, `/revisione`, `/kdp` (alias `/pacchetto`), `/lancio`, `/seo`: fasi e KDP. `/personaggio`, `/worldbuilding`: costruzione del progetto. `/timone`, `/tema`, `/motivi`: architettura del libro. `/tavolozza`: mostra o arricchisce i dettagli propri del mondo. `/varianti`: alternative divergenti per un punto decisivo. `/dialogo`, `/incipit`, `/finale`: strumenti di mestiere sull'unità corrente. `/quarta`, `/logline`, `/pitch`: testi promozionali. `/clone`: calibrazione da testo. `/granularita capitolo|scena|beat`, `/scena`, `/beat`: unità di lavoro. `/lettore`: lettura critica. `/canon`: coerenza. `/salva`, `/carica`, `/stato`, `/diagrammi`: gestione del progetto. Questi comandi non richiedono parser dedicato: sono richieste in linguaggio naturale.
 
 I percorsi di manuali, saggi e low-content mantengono i loro obiettivi; non imporre personaggi, trauma o conflitto drammatico alla non-fiction. Consulta [generi](generi.md) per adattamenti e [fasi](fasi.md) per gli output.

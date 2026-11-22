@@ -1,4 +1,4 @@
-# Ricerca, materiali KDP e lancio · BookForge 7.7
+# Ricerca, materiali KDP e lancio · BookForge 7.8
 
 ## `/ricerca`: evidenze e posizionamento
 
@@ -12,7 +12,7 @@ Non usare risultati di ricerca come prova del rank corrente se il dato non è pr
 
 Coerenza con contenuto e lettore prima del volume di ricerca. Verifica sul portale i limiti correnti dei campi, keyword, categorie e HTML; non promettere ranking controllabile. Evita keyword ingannevoli, riferimenti impropri a concorrenti e credenziali inventate.
 
-Fiction: gancio → protagonista e mondo → conflitto → posta in gioco e domanda aperta. Non rivelare il finale nella descrizione di vendita; una sinossi editoriale può invece includerlo se è il suo scopo. Non-fiction: problema → risultato realistico → contenuti/applicazioni → differenziazione verificabile. La descrizione riprende la voce del libro; non impone liste di benefici alla fiction.
+Procedure complete per logline, quarta, descrizione, pitch, titolo, bio, lettori anticipati, newsletter e ascolto: [promozione](promozione.md). Fiction: gancio da un'incongruenza reale → protagonista e mondo → una regola del mondo (il meccanismo) → conflitto → posta in gioco e domanda implicita nel conflitto, senza «Riuscirà…?». Non rivelare il finale nella descrizione di vendita; una sinossi editoriale può invece includerlo se è il suo scopo. Non-fiction: problema → risultato realistico → contenuti/applicazioni → differenziazione verificabile. La descrizione riprende la voce del libro; non impone liste di benefici alla fiction.
 
 ## `/kdp`, alias `/pacchetto`
 

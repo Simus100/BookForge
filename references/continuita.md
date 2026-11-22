@@ -1,4 +1,4 @@
-# Canone, conoscenze e serie · BookForge 7.7
+# Canone, conoscenze e serie · BookForge 7.8
 
 La Bibbia serve anche un volume singolo quando il progetto lo richiede. Conserva l'archivio completo; prepara una vista di lavoro con le sole entità, regole, eventi e promesse pertinenti. Una vista condensata non sostituisce l'archivio.
 
@@ -14,7 +14,13 @@ La Bibbia serve anche un volume singolo quando il progetto lo richiede. Conserva
 
 Il campo `known_by` collega le informazioni ai personaggi; `reader_knows` indica se sono state comunicate al lettore. Un progetto con flashback deve esplicitare il momento narrativo in `source` o nei dati aggiuntivi; il validatore non deduce cronologia o onniscienza dal testo.
 
-Usa ID stabili e distinti di progetto, volume, capitolo, scena e personaggio. Una promessa ha origine, stato e eventuale risoluzione; un rinvio consapevole non è una dimenticanza. Relazioni e timeline possono essere strutturate in `narrative_state` e nei file di archivio del manifest.
+Elementi utili in `narrative_state`, in JSON libero:
+- `motifs`: motivo, apparizioni, valore a ogni ritorno;
+- `turns`: colpi di scena, con tipo, capitolo e cosa ribaltano;
+- `palette`: tavolozza del mondo, cioè oggetti quotidiani, gergo, marche, cibi, mestieri, rumori e abitudini che appartengono solo a questo libro. La alimenta l'autore, o le proposte che accetta; serve a dare alle scene dettagli che nessun'altra storia avrebbe;
+- `places`: luogo → funzione nella storia (dove si confessa, dove si litiga, dove si passa una soglia).
+
+Chi entra va pagato: ogni personaggio o oggetto rilevante introdotto ha un esito, anche minimo, oppure una ragione per restare sospeso. Usa ID stabili e distinti di progetto, volume, capitolo, scena e personaggio. Una promessa ha origine, stato e eventuale risoluzione; un rinvio consapevole non è una dimenticanza. Relazioni e timeline possono essere strutturate in `narrative_state` e nei file di archivio del manifest.
 
 ## `/canon`
 

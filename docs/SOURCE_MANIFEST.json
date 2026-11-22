@@ -1,7 +1,7 @@
 {
-  "release": "7.7.0",
+  "release": "7.8.0",
   "repository_base_commit": "963f6a2dbaa66f2777e419ec8324cbd3827c0b67",
-  "inputs": [
+  "previous_release_inputs": [
     {
       "source": "continuita.md",
       "sha256": "c65d69efa05a143372760109e201e779563d327659fea24ea3f74cc27c94c236"
@@ -58,6 +58,44 @@
       "source": "llm-scrittura-creativa.md",
       "sha256": "d9cd1b93d2ff44f6daccb30acb71ea1f57a9a5e63d0aa9b7ded31d2d09cf7f22",
       "role": "consigli non vincolanti"
+    }
+  ],
+  "inputs": [
+    {
+      "source": "Franzoso, Il grande libro della scrittura",
+      "role": "analisi per meccanismo, nessun testo riprodotto"
+    },
+    {
+      "source": "Gotham Writers' Workshop, Lezioni di scrittura creativa",
+      "role": "idem"
+    },
+    {
+      "source": "Carver, Il mestiere di scrivere",
+      "role": "idem"
+    },
+    {
+      "source": "Cotroneo, Manuale di scrittura creativa per principianti",
+      "role": "idem"
+    },
+    {
+      "source": "Loi, Manuale di scrittura creativa. 100 esercizi pratici",
+      "role": "idem"
+    },
+    {
+      "source": "Novak, La bibbia della scrittura creativa",
+      "role": "idem"
+    },
+    {
+      "source": "Losito, Copywriting persuasivo",
+      "role": "solo promozione, filtrato"
+    },
+    {
+      "source": "Halls, Video Script Writing",
+      "role": "solo promozione/ascolto"
+    },
+    {
+      "source": "arXiv 2409.14509, 2309.14556, 2510.01171, 2410.02603, 2501.00273",
+      "role": "ricerca su narrativa generata"
     }
   ]
 }

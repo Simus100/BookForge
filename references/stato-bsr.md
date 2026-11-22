@@ -1,4 +1,4 @@
-# Stato e ripresa · BookForge 7.7 / schema 2.0
+# Stato e ripresa · BookForge 7.8 / schema 2.0
 
 `bookforge_state.json` è il registro canonico delle decisioni e un indice dei file. Non contiene necessariamente la prosa; una nuova chat deve ricevere anche i file richiesti dal manifest. Il Markdown è una vista generata, non un secondo stato da aggiornare.
 
