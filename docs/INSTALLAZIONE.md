@@ -1,4 +1,4 @@
-# Usare BookForge 7.7
+# Usare BookForge 7.8
 
 ## Pacchetto e ambienti
 

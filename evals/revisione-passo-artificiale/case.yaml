@@ -1,0 +1,6 @@
+schema_version: "1.1"
+name: revisione-passo-artificiale
+expected_outcome: |
+  Il passo revisionato conserva i fatti (Lara, il fratello Tommaso, il padre morto tre anni fa, la casa chiusa, la lettera, il perdono mancato, la mano sulla spalla) ed elimina cliché, esposizione 'come sai', possessivi superflui, calchi e la morale finale; segue una breve nota sugli interventi.
+context:
+  scaffold_script: place-files.sh

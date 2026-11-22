@@ -1,4 +1,4 @@
-# Brief, indice e revisione · BookForge 7.7
+# Brief, indice e revisione · BookForge 7.8
 
 ## Fasi 0–7
 
@@ -17,16 +17,25 @@ La sequenza è un percorso suggerito, non un obbligo per chi porta già un indic
 
 ## Scheda e indice
 
-Brief: titolo provvisorio, idea, tipo/genere, target, promessa, lingua, vincoli, voce e formato desiderato. Assegna un preset orientativo o ricava preferenze dal testo; la personalizzazione può avvenire su un campione, senza questionario a dodici assi.
+Brief: titolo provvisorio, idea, tipo/genere, target, promessa, lingua, vincoli, voce e formato desiderato. Per la fiction aggiungi, quando l'autore è pronto: posta in gioco dell'autore, timone in 25 parole, domanda drammatica principale, narratore (tipo, persona, tempo di base, a chi racconta). Vedi [architettura](architettura.md) §1 e [narratore](narratore.md) §1; non bloccare la scrittura se l'autore preferisce scoprire strada facendo. Assegna un preset orientativo o ricava preferenze dal testo; la personalizzazione può avvenire su un campione, senza questionario a dodici assi.
 
-Per capitolo: ID, titolo, funzione, cosa cambia o si apprende, relazione col precedente/successivo. Fiction: personaggi, timeline, promesse e finale provvisorio. Non-fiction: prerequisiti, tesi, fonti, esempi e progressione. Proponi strutture alternative solo se rappresentano scelte reali. Registra decisioni e granularità.
+Per capitolo: ID, titolo, funzione, cosa cambia o si apprende, relazione col precedente/successivo. Fiction: personaggi, timeline, promesse e finale provvisorio; sotto-domanda che il capitolo apre o chiude, fase del libro (esordio, centro, dopo il climax, congedo), eventuale motivo che ritorna. Per le scene chiave prova almeno un ordine alternativo e annota l'effetto ([architettura](architettura.md) §3). Non-fiction: prerequisiti, tesi, fonti, esempi e progressione. Proponi strutture alternative solo se rappresentano scelte reali. Registra decisioni e granularità.
 
 ## Revisione
 
 - Livello 1: forma e scorrevolezza entro il mandato; preserva voce e contenuto.
 - Livello 2: stile, ritmo, ripetizioni contestuali e dialoghi; evita modifiche strutturali implicite.
-- Livello 3: struttura e causalità, archi e promesse; poi scene, voce, frase e forma. Non-fiction: evidenze e integrità delle fonti attraverso il lavoro, non solo a fine libro.
+- Livello 3: struttura e causalità, archi e promesse; poi scene, voce, frase e forma. Per la fiction verifica domanda drammatica, prove che colpiscono la debolezza del protagonista, sorprese oneste, proporzione del finale, motivi, tema raccolto dopo la stesura ([architettura](architettura.md)). Non-fiction: evidenze e integrità delle fonti attraverso il lavoro, non solo a fine libro.
 
 Diagnosi prima della riscrittura: posizione → problema → gravità → effetto → intervento. Non riscrivere un capitolo intero quando basta un passaggio. Distingui il testo effettivamente revisionato dalla proposta di ristrutturazione non ancora approvata. Se l'autore autorizza la revisione, applica le modifiche comprese nel mandato senza richiedere conferma per ogni refuso.
+
+**Passate separate**, un aspetto per volta, dal grande al piccolo:
+1. struttura;
+2. scene (funzione, ingresso, uscita, scena o sommario, raccordi);
+3. personaggi e dialoghi ([dialogo](dialogo.md), [narratore](narratore.md) §3–4);
+4. frase ([anti-ai](anti-ai.md));
+5. punteggiatura e suono, con lettura ad alta voce.
+
+Prima di rivedere, prendi distanza: quando possibile rileggi in un contesto separato, come se il testo fosse di un altro. Riscrivere da zero un passaggio fallito, tenendo solo il suo elemento migliore, può valere più di dieci rattoppi; vale per le bozze, mai per la prosa già accettata senza mandato.
 
 Con Python puoi integrare la stilometria italiana; senza, dichiara il limite. Un numero non decide la bontà di una scena. Usa [valutazione](valutazione.md) per rubriche, risultati e disaccordi. Il log delle modifiche fa parte della consegna quando utile all'autore, non una checklist rituale.

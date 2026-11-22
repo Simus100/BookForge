@@ -1,4 +1,4 @@
-# Antologia della voce · BookForge 7.7
+# Antologia della voce · BookForge 7.8
 
 Questo è il template comune. I campioni reali stanno nella cartella del progetto e nel suo manifest, non in questo file.
 

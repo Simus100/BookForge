@@ -1,4 +1,4 @@
-# StyleDNA · BookForge 7.7
+# StyleDNA · BookForge 7.8
 
 Dodici preferenze descrivono il registro, non una misura della qualità o manopole indipendenti. Il testo approvato e l'intenzione dell'autore prevalgono sul vettore. Una scena può variare per funzione; non forzare una media di capitolo per soddisfare un numero.
 
@@ -42,11 +42,18 @@ I riferimenti ad autori nella tabella sono esempi descrittivi, non richieste di 
 — NON-FICTION —
 🧠 SAGGISTICA AUTOREVOLE SL:5 SC:5 RV:6 VR:6 RL:6 FD:4 ST:5 SD:3 DW:2 ET:4 SUB:3 AP:8
 💡 SELF-HELP ACCESSIBILE SL:4 SC:3 RV:5 VR:4 RL:3 FD:4 ST:6 SD:2 DW:4 ET:6 SUB:2 AP:7
+✂️ MINIMALISTA          SL:3 SC:2 RV:5 VR:5 RL:4 FD:2 ST:8 SD:5 DW:6 ET:5 SUB:9 AP:2
 📚 MANUALE TECNICO       SL:5 SC:4 RV:4 VR:7 RL:7 FD:2 ST:4 SD:1 DW:1 ET:2 SUB:1 AP:5
 🎙️ MEMOIR/AUTOBIOGRAFIA  SL:5 SC:5 RV:7 VR:6 RL:4 FD:5 ST:7 SD:6 DW:5 ET:8 SUB:5 AP:9
 ```
 
+Il preset minimalista va trattato come una voce, non come un insieme di difetti. Frasi brevi, ripetizioni, finali su un gesto e figuratività bassa sono scelte: in revisione [anti-ai](anti-ai.md) li legge come eccezioni. La sottrazione deve avere una ragione narrativa e conservare il sentimento umano.
+
 I valori sono ipotesi iniziali modificabili, non profili validati. Non si applicano tetti universali né deroghe condizionate all'assenza di flag. Per SF, horror e storico usare i rispettivi preset; gli ibridi si costruiscono sul testo dell'autore. Non trasferire lezioni di un singolo libro a tutti i progetti.
+
+## Modulazioni e ragioni
+
+Gli assi possono variare con la posizione nel libro, per esempio un esordio più disteso, un centro più serrato e un congedo più riflessivo, e con la scena. Annota le modulazioni volute nelle note di timbro. Lega densità e sottrazione a una ragione narrativa dichiarata: una lingua che imita la condizione del personaggio, come una prosa scarna per la fame o accumulativa per la memoria, è più forte di un valore scelto per gusto. Narratore, persona e tempo di base vanno nel brief ([narratore](narratore.md) §1); le preferenze stabili di voce in `voice_fingerprint.idiolect`.
 
 ## Calibrazione /clone
 

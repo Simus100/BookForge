@@ -1,0 +1,6 @@
+schema_version: "1.1"
+name: continuazione-voce-noir
+expected_outcome: |
+  Una continuazione di 600-800 parole in prima persona al passato prossimo, con l'abitudine di contare, senza rivelare dove fosse Ivo e senza che Marta o Ivo nominino apertamente la bugia.
+context:
+  scaffold_script: place-files.sh

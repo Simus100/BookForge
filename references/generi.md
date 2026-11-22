@@ -1,4 +1,4 @@
-# Generi, strutture e worldbuilding · BookForge 7.7
+# Generi, strutture e worldbuilding · BookForge 7.8
 
 Le specifiche di genere (lunghezze, convenzioni) e le strutture canoniche sono per lo più conoscenza che già padroneggi: qui trovi il **menu di scelta**, le lunghezze editoriali indicative, non requisiti KDP e lo StyleDNA suggerito — non l'enumerazione dei beat.
 
@@ -12,13 +12,15 @@ Le specifiche di genere (lunghezze, convenzioni) e le strutture canoniche sono p
 | Thriller / Suspense | 70-90k | setup rapido→twist→climax veloce; capitoli brevi, cliffhanger | Thriller/Page-Turner |
 | Giallo / Mystery | 60-80k | crimine→indagine→false piste→rivelazione; fair play sugli indizi | Thriller/Page-Turner |
 | Fantasy | 80-120k (epic 150k) | worldbuilding + quest; sistema magico con regole e limiti | Epic Fantasy |
-| Fantascienza | 70-100k | premessa scientifica coerente + implicazioni | 🚀 Fantascienza (per distopia più cupa, partire da 🖤 Dark Literary e ritoccare) |
+| Fantascienza | 70-100k | premessa coerente + implicazioni; un novum preciso, detto piano e abitato (vedi [scena](scena.md) §11) | 🚀 Fantascienza (per distopia più cupa, partire da 🖤 Dark Literary e ritoccare) |
 | Romance | 50-80k | incontro→ostacolo→crisi→HEA/HFN (obbligatorio) | Romance Contemporaneo |
 | Horror | 60-80k | normalità→perturbazione→escalation→confronto; atmosfera | Horror / Weird |
 | Narrativa storica | 80-120k | radicata nel periodo; verificare le fonti | Romanzo Storico |
 | Racconti / Antologia | 1-15k a racconto, 30-60k totale | autonomi, filo tematico; economia narrativa | Narrativo Classico |
 
 **Errori comuni da evitare**: plot debole o auto-indulgenza (letterario); plot hole e villain debole (thriller); indizi non giocati onestamente (giallo); info-dump e magia senza limiti (fantasy); scienza incoerente (sci-fi); conflitto forzato e poca chimica (romance); jump scare non costruiti (horror).
+
+**Noir e fantascienza noir:** testimone o confessore con un motivo per raccontare; minaccia con un oggetto preciso e non atmosfera; il mondo (potere, economia, tecnologia) che forza le scelte private; indagine come avvicinamento a una verità, non come catena di colpi di scena.
 
 ## Sottogeneri da esplorare (domanda da verificare)
 
@@ -35,7 +37,7 @@ Le specifiche di genere (lunghezze, convenzioni) e le strutture canoniche sono p
 | **Save the Cat** | i 3 atti in 15 beat con percentuali | piano battuto e ritmato (commerciale) |
 | **Viaggio dell'Eroe** | monomito in 12 tappe | archi character-driven, forte trasformazione |
 
-**Snodi-chiave possibili per strutture commerciali**, da adattare: incidente scatenante (~10%), Plot Point 1 (~20-25%, impegno irreversibile), Midpoint (~50%, da passivo ad attivo), All is Lost / PP2 (~75%), Climax (~90%), Risoluzione. Scegli UNA struttura come scheletro, posiziona gli snodi, sviluppa i beat. Non forzare ogni tappa.
+**Snodi-chiave possibili per strutture commerciali**, da adattare: incidente scatenante (~10%), Plot Point 1 (~20-25%, impegno irreversibile), Midpoint (~50%, da passivo ad attivo), All is Lost / PP2 (~75%), Climax (~90%), Risoluzione. Scegli UNA struttura come scheletro, posiziona gli snodi, sviluppa i beat. Non forzare ogni tappa. Strumenti trasversali alle strutture (domanda drammatica, soluzione provvisoria al centro, assestamento dopo le svolte, motivi, finale proporzionato) sono in [architettura](architettura.md). Un modello conosce già fin troppo bene il monomito: usalo come verifica, non come stampo.
 
 ## Non-fiction — specifiche per genere
 
@@ -54,6 +56,7 @@ Compila in Fase 1-2. La coerenza del mondo conta quanto la trama.
 4️⃣ GEOGRAFIA E CLIMA: regioni e città chiave, clima, pericoli ambientali
 5️⃣ LINGUAGGIO E VITA QUOTIDIANA: lingue, 3-5 termini inventati chiave, espressioni culturali
 6️⃣ REGOLE AUREE DI COERENZA: il paradosso da evitare, la "bugia" del mondo (cosa tutti credono che non è vero)
+7️⃣ PERCORSO DAL PRESENTE: 3-5 passaggi causali che portano dal nostro mondo a quello del romanzo; chi occupa i ruoli di potere e perché
 ```
 
 ## Libri low-content / no-content (flusso diverso)
